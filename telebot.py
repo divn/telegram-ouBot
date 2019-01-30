@@ -23,7 +23,3 @@ def send_message(text, chat_id):
     sendmsg = 'sendMessage?chat_id={}&text={}'.format(chat_id, text)
     url = config.URL + sendmsg
     requests.post(url)
-
-
-text, chatid = get_last_chat_id_and_text(get_updates())
-send_message(text, chatid)
