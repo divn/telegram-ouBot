@@ -19,6 +19,12 @@ def get_last_chat_id_and_text(update):
     return (text, chat_id)
 
 
+def get_last_chat_id(update):
+    last = len(update['result']) - 1
+    chat_id = update['result'][last]['message']['chat']['id']
+    return chat_id
+
+
 def send_message(text, chat_id):
     sendmsg = 'sendMessage?chat_id={}&text={}'.format(chat_id, text)
     url = config.URL + sendmsg
