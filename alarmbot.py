@@ -10,13 +10,13 @@ def main():
     while True:
         valveposition = ouman.valve_position()
         warning = 'Warming valve position ' + str(valveposition)
-        if errorcode > ouman.valve_position() >= warninglimit:
+        if errorcode > valveposition >= warninglimit:
             telebot.send_message(warning, chatid)
             time.sleep(300)
-            print('300')
+            print('Error Send' + valveposition)
 
         time.sleep(120)
-        print('60')
+        print(valveposition)
 
 
 if __name__ == '__main__':
