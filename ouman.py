@@ -11,7 +11,6 @@ def valve_position():
 
         data = temp.text
         data = int(data[17:-2])
-        print(data)
         return data
 
     except requests.exceptions.RequestException:

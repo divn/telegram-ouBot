@@ -4,6 +4,7 @@ import time
 
 
 def main():
+    print('Bot Started')
     chatid = telebot.get_last_chat_id(telebot.get_updates())
     warninglimit = 30
     errorcode = 666
