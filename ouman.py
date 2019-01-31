@@ -10,8 +10,8 @@ def valve_position():
                             '/request?' + VALVE, timeout=1)
 
         data = temp.text
-        data = data[8:-1]
-        data = int(data[-3:-1])
+        data = int(data[17:-2])
+        print(data)
         return data
 
     except requests.exceptions.RequestException:
