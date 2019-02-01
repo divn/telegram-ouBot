@@ -29,3 +29,7 @@ def send_message(text, chat_id):
     sendmsg = 'sendMessage?chat_id={}&text={}'.format(chat_id, text)
     url = config.URL + sendmsg
     requests.post(url)
+
+
+def own_chat_id():
+    return config.CHATID
